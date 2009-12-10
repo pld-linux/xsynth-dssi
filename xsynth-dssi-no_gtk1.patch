@@ -1,0 +1,14 @@
+diff -durN xsynth-dssi-0.9.2.orig/configure.in xsynth-dssi-0.9.2/configure.in
+--- xsynth-dssi-0.9.2.orig/configure.in	2008-12-30 20:16:37.000000000 +0100
++++ xsynth-dssi-0.9.2/configure.in	2009-12-10 19:55:01.000000000 +0100
+@@ -25,10 +25,6 @@
+ if test "x${try_gtk2}" = 'xyes'; then
+     AM_PATH_GTK_2_0(2.0.0, with_gtk='yes (version 2.0)', with_gtk=no)
+ fi
+-dnl  No GTK+ 2.x found, look for GTK+ 1.2 instead
+-if test "x${with_gtk}" = 'xno'; then
+-    AM_PATH_GTK(1.2.0, with_gtk='yes (version 1.2)', AC_MSG_WARN([GUI will not be built because no version of GTK+ was found]))
+-fi
+ AM_CONDITIONAL(BUILD_GUI, test "x${with_gtk}" != 'xno')
+ echo "GTK support: $with_gtk"
+ 
