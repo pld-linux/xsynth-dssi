@@ -63,7 +63,7 @@ Oparty na GTK+ graficzny interfejs użytkownika do Xsynth-DSSI.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__libtoolize}
